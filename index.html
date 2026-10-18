@@ -31,7 +31,7 @@ a{color:var(--blue)}
 /* hero */
 .hero{background:linear-gradient(135deg,var(--g1),var(--g2) 55%,var(--g3));color:#fff;padding:28px 0 0;overflow:hidden;position:relative}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:40px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;letter-spacing:-.01em;color:#fff;text-decoration:none}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;letter-spacing:-.01em;color:#fff;text-decoration:none;white-space:nowrap}
 .brand img{width:36px;height:36px;border-radius:9px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 .nav a.small{color:#fff;opacity:.85;font-size:.92rem;text-decoration:none}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
@@ -116,6 +116,20 @@ footer .links a{color:var(--muted)}
   .nav{margin-bottom:28px}
   section{padding:40px 0}
 }
+
+/* family switcher */
+.switch{display:inline-flex;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:3px;gap:2px}
+.switch a{color:#fff;text-decoration:none;font-size:.82rem;font-weight:700;padding:6px 12px;border-radius:999px;white-space:nowrap;opacity:.85}
+.switch a.on{background:#fff;color:var(--g3);opacity:1}
+.switch a:not(.on):hover{background:rgba(255,255,255,.14);opacity:1}
+.sister{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.sister img{width:56px;height:56px;border-radius:13px;flex:none;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.sister .t{flex:1;min-width:220px}
+.sister .t b{display:block;color:var(--ink);font-size:1.05rem;margin-bottom:2px}
+.sister .t p{margin:0;font-size:.93rem}
+.sister .go{display:inline-block;color:#fff;background:#0f766e;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:12px;white-space:nowrap}
+.sister .go:hover{filter:brightness(1.08)}
+@media (max-width:540px){.switch a{padding:6px 9px;font-size:.76rem}}
 </style>
 </head>
 <body>
@@ -124,7 +138,7 @@ footer .links a{color:var(--muted)}
   <div class="wrap">
     <nav class="nav">
       <a class="brand" href="./"><img src="img/icon.webp" alt="" width="36" height="36" />FirstPass</a>
-      <a class="small" href="https://apps.apple.com/us/app/id6792333505">Get the app →</a>
+      <div class="switch" aria-label="FirstPass apps"><a class="on" href="./" aria-current="page">SHRM-CP / SCP</a><a href="https://brandonpostlethwait.github.io/firstpass-hr-site/">PHR / SPHR</a></div>
     </nav>
     <div class="hero-grid">
       <div>
@@ -250,6 +264,16 @@ footer .links a{color:var(--muted)}
     <details><summary>Does it cover the SHRM-SCP, or just the CP?</summary><p>Both, as separate tracks. You choose on first launch and can switch in Settings. The SCP track has its own 5,020 senior-level questions and 190 lessons.</p></details>
     <details><summary>Android?</summary><p>iPhone and iPad today. Android is on the roadmap; email us and we'll let you know when it ships.</p></details>
     <details><summary>Can I delete my account and data?</summary><p>Yes, from inside the app (Settings → Account → Delete), or <a href="delete-account.html">follow these steps</a>.</p></details>
+  </div>
+</section>
+
+<section id="family" style="padding-top:0">
+  <div class="wrap">
+    <div class="sister">
+      <img src="img/icon-hr.webp" alt="" width="56" height="56" />
+      <div class="t"><b>Studying for the PHR or SPHR instead?</b><p>FirstPass HR is the same approach for the HRCI exams: 9,712 questions, 356 lessons, full-length simulations in the official formats. Same price.</p></div>
+      <a class="go" href="https://brandonpostlethwait.github.io/firstpass-hr-site/">See FirstPass HR →</a>
+    </div>
   </div>
 </section>
 
